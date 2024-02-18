@@ -1,0 +1,191 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+	
+	
+	<!-- MAIN BODY -->
+	<div class="limiter">
+		<div class="container-login100" style="margin-top: -60px;">
+			<!-- <div  class="wrap-login100  "> -->
+					<form method="POST" name = 'signup_form'  class="login100-form validate-form " autocomplete="off">
+						<span class="login100-form-title p-b-43 m-t-0 ">
+							<a id='shw2' href="{{ url_for('index')}}"> 
+								<span class='fa fa-arrow-left' style='margin-left: -40px; font-size: 30px;'>&nbsp;&nbsp;</span>
+							</a>
+							Register with your details
+						</span>
+                        
+                        <div class="row">
+                            <div class="col-md-3">
+
+                                First Name:
+                                <div class="wrap-input100 validate-input" placeholder="Enter first name" data-validate = "Valid name is required">
+                                    <input class="input100" type="text" name="reg_fname" autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+
+                                Last Name:
+                                <div class="wrap-input100 validate-input" placeholder="Enter last name" data-validate = "Valid name is required">
+                                    <input class="input100" type="text" name="reg_lname" autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    Email:
+                                    <div class="wrap-input100 validate-input" placeholder="Enter email" data-validate = "Valid email is required: ex@abc.xyz">
+                                        <input class="input100" type="text" name="reg_email" autocomplete="off">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        <div class="row">
+                            <div class="col-md-6">
+                                Password:
+                                <div class="wrap-input100 validate-input" placeholder="Enter password" data-validate="Password is required">
+                                    <input class="input100" type="password" name="reg_pass">
+                                </div>	
+                            </div>
+                             <!-- <div class="col">
+                                Re-enter Password:
+                                <div class="wrap-input100 validate-input" placeholder="re-nter password" data-validate="Passwords dont match">
+                                    <input class="input100" type="password" name="reg_pass_conf">
+                                     <span class="focus-input100"></span> -->
+                                    <!-- <span class="label-input100">Re - enter Password</span> 
+                                </div>	
+                            </div>  -->
+                        </div>
+
+                        <span class="login100-form-title p-b-43 p-t-46">
+							Enter Your Marks and other details:
+						</span>
+                        <div class="row">
+                            <div class="col-md-3">
+
+                                Semester 1:
+                                <div class="wrap-input100 validate-input" placeholder="Enter first name" >
+                                    <input step="0.01" class="input100" type="number" name="reg_sem1_score" autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+
+                                Semester 2:
+                                <div class="wrap-input100 validate-input"  >
+                                    <input step="0.01" class="input100" type="number" name="reg_sem2_score" autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+
+                            <div class="col-md-3">
+
+                                Semester 3:
+                                <div class="wrap-input100 validate-input"  >
+                                    <input step="0.01" class="input100" type="number" name="reg_sem3_score" autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+
+                                Semester 4:
+                                <div class="wrap-input100 validate-input"  >
+                                    <input step="0.01" class="input100" type="number" name="reg_sem4_score" autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+
+                                Semester 5:
+                                <div class="wrap-input100 validate-input"  >
+                                    <input step="0.01" class="input100" type="number" name="reg_sem5_score" autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+
+                                Semester 6:
+                                <div class="wrap-input100 validate-input" >
+                                    <input step="0.01" class="input100" type="number"  name="reg_sem6_score" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+
+                            <div class="col-md-3">
+
+                                Semester 7:
+                                <div class="wrap-input100 validate-input"  >
+                                    <input step="0.01" class="input100" type="number" name="reg_sem7_score"  >
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+
+                                Semester 8:
+                                <div class="wrap-input100 validate-input" >
+                                    <input step="0.01" class="input100" type="number" name="reg_sem8_score" autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+
+                        <span class="login100-form-title p-b-43 p-t-46">
+							Work Status:
+						</span>
+                        <div class="row  " style="font-size: 20px;">
+                            <div class="row m-r-50">
+                                <input type="radio"  id="emp" name="emp_status" value="1">
+                                <label for="emp">Placed</label><br>
+                            </div>
+
+                            <div class="row m-r-50">
+                                <input type="radio" id="unemp"class="m-r-10"  name="emp_status" value="2">
+                                <label for="unemp">Looking for job</label><br>
+                            </div>
+                            <div class="row m-r-50">
+                                <input type="radio" id="high_stud" class="m-r-10" name="emp_status" value="3">
+                                <label for="high_stud">Going for higher studies</label>
+                            </div>
+                        </div>
+                        <div class="row m-t-20 m-l-5 " style="font-size: 20px;">
+                            <label for="package">Choose the range of your package:</label>
+                            <select id="package" class="m-l-10" name="package">
+                                    <option value="Unplaced">Unplaced</option>
+                                    <option value="less than 3lpa">less than 3lpa</option>
+                                    <option value="3 - 6lpa">3 - 6lpa</option>
+                                    <option value="6-10lpa">6-10lpa</option>
+                                    <option value="more than 10lpa">more than 10lpa</option>
+                                </select>
+                        </div>
+						
+						{% with messages = get_flashed_messages(with_categories=true) %}
+                            {% if messages %}
+                            {% for category, message in messages %}
+                                <div class="row alert alert-{{ category }}" style="font-size: 25px;">
+                                {{ message }}
+                                </div>
+                            {% endfor %}
+                            {% endif %}
+                        {% endwith %}
+						
+						
+	
+						<div class="container-login100-form-btn m-t-120" style="max-width: 300px; ">
+							<input type="submit" style="font-size: 20px;" class="btn login100-form-btn" name='register' value="Register" id='register'/> 
+                        </div>
+                        
+					</form>
+
+
+				<!-- <div class="login100-more" style="background-image: url('images/bg-01.jpg');">
+				</div> -->
+			<!-- </div> -->
+		</div>
+	</div>
+	
+	
+	
+  
+
+
+
+{% endblock %}

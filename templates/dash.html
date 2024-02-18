@@ -1,0 +1,215 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class="container" style="margin-left: 0; margin-right: 0;">
+    <div class="col-md-3 clearfix mt-5 mb-3 ">
+        <a href="{{ url_for('profile')}}">
+          <button type="button" style="max-width: 6vw;font-size: 16px;" class="login100-form-btn-cancel"
+            name='backHome' id='backHome'>
+            Back
+          </button>
+        </a>
+      </div>
+    <div class="row m-t-20 m-l-10 ">
+        <div class="col-md-12">
+            <div class="profile-head row m-t-20">
+                    <div class="col-md-3 " style="margin-right: -100px;">
+                        <h4><b>Name:</b></h4>
+                    </div>
+                    <div class="col">
+                        <h3> {{ session['user']['fname'] + ' ' + session['user']['lname'] }}</h3> 
+                    </div>
+            </div>
+            <div class="profile-head row m-t-20">
+                <div class="col-md-3 " style="margin-right: -100px;">
+                    <h4><b>Email:</b></h4>
+                </div>
+                <div class="col">
+                    <h3> {{ session['user']['email']  }}</h3> 
+                </div>
+            </div>
+            
+  
+            <div class="profile-head row m-t-80">
+                <div class="col " style="margin-right: -100px;">
+                    <h3 class="m-b-20"><b>Test result:&nbsp;&nbsp;</b> {{report}}</h3>
+                    
+                    <img src={{url}} alt="Chart" height="600" width="800">
+
+                    <div class="container fs-23 m-t-80">
+                        <hr style="border-top: 2px solid rgba(0,0,0,.1);">
+                        <div class="row fs-25">
+                            <div class="col-md-3">
+                                <b>Parameter</b>
+                            </div>
+                            <div class="col-md-9">
+                                <b>Remarks</b>
+                            </div>
+                        </div>
+                        <hr style="border-top: 2px solid rgba(0,0,0,.1);">
+                        <div class="row m-t-20">
+                            <div class="col-md-3">
+                                <b>Organisational Skills</b>
+                            </div>
+                            <div class="col-md-9">
+                                {{result_det['ogr']}}
+                            </div>
+                        </div>
+                        <hr style="border-top: 1px solid rgba(0,0,0,.1);">
+
+                        <div class="row m-t-20">
+                            <div class="col-md-3">
+                                <b>Leadership skill</b>
+                            </div>
+                            <div class="col-md-9">
+                                {{result_det['lr']}}
+                            </div>
+                        </div>
+                        <hr style="border-top: 1px solid rgba(0,0,0,.1);">
+
+                        <div class="row m-t-20">
+                            <div class="col-md-3">
+                                <b>Communicational skill</b>
+                            </div>
+                            <div class="col-md-9">
+                                {{result_det['cr']}}
+                            </div>
+                        </div>
+                        <hr style="border-top: 1px solid rgba(0,0,0,.1);">
+
+                        <div class="row m-t-20">
+                            <div class="col-md-3">
+                                <b>Time Management Skills</b>
+                            </div>
+                            <div class="col-md-9">
+                                {{result_det['tmr']}}
+                            </div>
+                        </div>
+                        <hr style="border-top: 1px solid rgba(0,0,0,.1);">
+
+                        <div class="row m-t-20">
+                            <div class="col-md-3">
+                                <b> Problem Solving Skills</b>
+                            </div>
+                            <div class="col-md-9">
+                                {{result_det['psr']}}
+                            </div>
+                        </div>
+                        <hr style="border-top: 1px solid rgba(0,0,0,.1);">
+
+                        <div class="row m-t-20">
+                            <div class="col-md-3">
+                                <b>Self Management Skills</b>
+                            </div>
+                            <div class="col-md-9">
+                                {{result_det['smr']}}
+                            </div>
+                        </div>
+                        <hr style="border-top: 1px solid rgba(0,0,0,.1);">
+
+                        <div class="row m-t-20">
+                            <div class="col-md-3">
+                                <b>Team Work Skills</b>
+                            </div>
+                            <div class="col-md-9">
+                                {{result_det['twr']}}
+                            </div>
+                        </div>
+                        <hr style="border-top: 1px solid rgba(0,0,0,.1);">
+
+                        <div class="row m-t-20">
+                            <div class="col-md-3">
+                                <b>Decision Making Skills</b>
+                            </div>
+                            <div class="col-md-9">
+                                {{result_det['dmr']}}
+                            </div>
+                        </div>
+                        <hr style="border-top: 1px solid rgba(0,0,0,.1);">
+
+                        <div class="row m-t-20">
+                            <div class="col-md-3">
+                                <b>Self Confidence Skills</b>
+                            </div>
+                            <div class="col-md-9">
+                                {{result_det['scr']}}
+                            </div>
+                        </div>
+                        <hr style="border-top: 1px solid rgba(0,0,0,.1);">
+
+                        <div class="row m-t-20 m-b-50">
+                            <div class="col-md-3">
+                                <b>Creativity Skills</b>
+                            </div>
+                            <div class="col-md-9">
+                                {{result_det['cvr']}}
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- <table class="table m-t-50" style="font-size: 18px;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Parameter</th>
+                                <th scope="col">Remarks</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Organizational skill</th>
+                                <td>{{result_det['ogr']}}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Leadership skill</th>
+                                <td>{{result_det['lr']}}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Communicational skill</th>
+                                <td>{{result_det['cr']}}</td>
+                            </tr>
+                            
+                            <tr>
+                                <th scope="row">Time Management skill</th>
+                                <td>{{result_det['tmr']}}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Problem Solving skill</th>
+                                <td>{{result_det['psr']}}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Self management skill</th>
+                                <td>{{result_det['smr']}}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Team Work skill</th>
+                                <td>{{result_det['twr']}}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Decision Making skill</th>
+                                <td>{{result_det['dmr']}}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Self Confidence skill</th>
+                                <td>{{result_det['scr']}}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Creativity skill</th>
+                                <td>{{result_det['cvr']}}</td>
+                            </tr>
+                        </tbody>
+                    </table> -->
+                </div>
+            </div>
+
+        
+
+
+            
+                    
+</div>
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,5204 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+
+
+<div class="row ml-2 ">
+  <div class="col border border-light">
+	<hr>
+	<div class="survey-head ">
+	  <i class="fas fa-poll-h fa-3x blue-text mb-2"></i>
+	  <p><span class="font-weight-bold">Please select the appriopriate option that suits best for you</span>
+	  </p>
+	</div>
+	<hr>
+	<div class="row mt-5 mb-5 ">
+	  <div class="col-md-4 h2 font-weight-bold">
+		Questions
+	  </div>
+
+	  <div class="question-atts col col-centered">Never</div>
+	  <div class="question-atts col col-centered">Rarely</div>
+	  <div class="question-atts col col-centered">Sometimes</div>
+	  <div class="question-atts col col-centered">Often</div>
+	  <div class="question-atts col col-centered">Always</div>
+	</div>
+
+
+	<!-- QUESTIONS FORM -->
+
+	<form name='test_form' method="POST">
+
+	  <div class="tab">
+
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  I use a planner to keep track of my tasks
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="organizational_skill_1" type="radio" required id="q1" value="1">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="organizational_skill_1" type="radio" required id="q2" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="organizational_skill_1" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="organizational_skill_1" type="radio" required id="q4" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="organizational_skill_1" type="radio" required id="q5" value="5">
+			</div>
+		  </div>
+
+		</div>
+
+		<!--
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  My planner is filled in with all of my homework assignments and upcoming tests, quizzes, and projects.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="organizational_skill_2" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="organizational_skill_2" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="organizational_skill_2" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="organizational_skill_2" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="organizational_skill_2" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+					</div> -->
+		<!--
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I check my planner before I leave school each day.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="organizational_skill_3" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="organizational_skill_3" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="organizational_skill_3" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="organizational_skill_3" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="organizational_skill_3" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+					</div> -->
+
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  I prioritize my homework /assignments /tasks and plan out when I will complete each one.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="organizational_skill_2" type="radio" required id="q1" value="1">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="organizational_skill_2" type="radio" required id="q2" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="organizational_skill_2" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="organizational_skill_2" type="radio" required id="q4" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="organizational_skill_2" type="radio" required id="q5" value="5">
+			</div>
+		  </div>
+
+		</div>
+
+
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  When faced with a large project or test, I break it down into smaller tasks.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="organizational_skill_3" type="radio" required id="q1" value="1">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="organizational_skill_3" type="radio" required id="q2" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="organizational_skill_3" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="organizational_skill_3" type="radio" required id="q4" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="organizational_skill_3" type="radio" required id="q5" value="5">
+			</div>
+		  </div>
+
+		</div>
+
+
+		<!-- <div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  When I do my homework, I have a dedicated, neat space to work that has all the materials I need to do my
+						  assignments
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="organizational_skill_6" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="organizational_skill_6" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="organizational_skill_6" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="organizational_skill_6" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="organizational_skill_6" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+					</div> -->
+
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  I have enough time to complete my tasks each day.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class=" form-check mb-4">
+			  <input class="" name="organizational_skill_4" type="radio" required id="q1" value="1">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="organizational_skill_4" type="radio" required id="q2" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="organizational_skill_4" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="organizational_skill_4" type="radio" required id="q4" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="organizational_skill_4" type="radio" required id="q5" value="5">
+			</div>
+		  </div>
+
+		</div>
+
+		<!--
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I clean out my backpack each night.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="organizational_skill_8" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="organizational_skill_8" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="organizational_skill_8" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="organizational_skill_8" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="organizational_skill_8" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+					</div>
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I put everything I need for school/college in my backpack and am not rushed in the morning looking for missing
+						  items.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="organizational_skill_9" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="organizational_skill_9" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="organizational_skill_9" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="organizational_skill_9" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="organizational_skill_9" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+					</div>
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  My locker is clean and I can find what I need in it easily.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="organizational_skill_10" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="organizational_skill_10" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="organizational_skill_10" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="organizational_skill_10" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="organizational_skill_10" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  At school/college, I can easily locate any items I need to do my work, like pencils, calculator, or books.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="organizational_skill_11" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="organizational_skill_11" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="organizational_skill_11" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="organizational_skill_11" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="organizational_skill_11" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+					</div>
+
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  When I get papers at school/college, I file them into a binder or folder for that class.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="organizational_skill_12" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="organizational_skill_12" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="organizational_skill_12" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="organizational_skill_12" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="organizational_skill_12" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+					</div>
+
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I feel prepared when I walk into class
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="organizational_skill_13" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="organizational_skill_13" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="organizational_skill_13" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="organizational_skill_13" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="organizational_skill_13" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+					</div>
+
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  My teachers would say I am organized.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="organizational_skill_14" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="organizational_skill_14" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="organizational_skill_14" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="organizational_skill_14" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="organizational_skill_14" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+					</div>
+   -->
+
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  People who know me would say I am organized.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class=" form-check mb-4">
+			  <input class="" name="organizational_skill_5" type="radio" required id="q1" value="1">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="organizational_skill_5" type="radio" required id="q2" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="organizational_skill_5" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="organizational_skill_5" type="radio" required id="q4" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="organizational_skill_5" type="radio" required id="q5" value="5">
+			</div>
+		  </div>
+
+		</div>
+
+
+	  </div>
+
+	  <div class="tab">
+
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  When assigning tasks, I consider people's skills and interests.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="leadership_skill_1" type="radio" required id="q1" value="1">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="leadership_skill_1" type="radio" required id="q2" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="leadership_skill_1" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="leadership_skill_1" type="radio" required id="q4" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="leadership_skill_1" type="radio" required id="q5" value="5">
+			</div>
+		  </div>
+		</div>
+
+
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  I doubt myself and my ability to succeed
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="leadership_skill_2" type="radio" required id="q1" value="5">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="leadership_skill_2" type="radio" required id="q2" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="leadership_skill_2" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="leadership_skill_2" type="radio" required id="q4" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="leadership_skill_2" type="radio" required id="q5" value="1">
+			</div>
+		  </div>
+		</div>
+		<!--
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I expect nothing less than top-notch results from people.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="leadership_skill_3" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="leadership_skill_3" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="leadership_skill_3" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="leadership_skill_3" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="leadership_skill_3" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+					</div> -->
+		<!--
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I expect my people to work harder than I do.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="leadership_skill_4" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="leadership_skill_4" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="leadership_skill_4" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="leadership_skill_4" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="leadership_skill_4" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+					</div>
+
+				   -->
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  When someone is upset, I try to understand how he or she is feeling.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="leadership_skill_3" type="radio" required id="q1" value="1">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="leadership_skill_3" type="radio" required id="q2" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="leadership_skill_3" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="leadership_skill_3" type="radio" required id="q4" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="leadership_skill_3" type="radio" required id="q5" value="5">
+			</div>
+		  </div>
+		</div>
+
+
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  When circumstances change, I can struggle to know what todo.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class=" form-check mb-4">
+			  <input class="" name="leadership_skill_4" type="radio" required id="q1" value="5">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="leadership_skill_4" type="radio" required id="q2" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="leadership_skill_4" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="leadership_skill_4" type="radio" required id="q4" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="leadership_skill_4" type="radio" required id="q5" value="1">
+			</div>
+		  </div>
+		</div>
+
+
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  I think that personal feelings shouldn't be allowed to get in the way of performance and productivity.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class=" form-check mb-4">
+			  <input class="" name="leadership_skill_5" type="radio" required id="q1" value="1">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="leadership_skill_5" type="radio" required id="q2" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="leadership_skill_5" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="leadership_skill_5" type="radio" required id="q4" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="leadership_skill_5" type="radio" required id="q5" value="5">
+			</div>
+		  </div>
+		</div>
+
+		<!--
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I am highly motivated because I know I have what it takes to be successful.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="leadership_skill_8" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="leadership_skill_8" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="leadership_skill_8" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="leadership_skill_8" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="leadership_skill_8" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+   -->
+		<!--
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  Time spent worrying about team morale is time that's wasted.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="leadership_skill_9" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="leadership_skill_9" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="leadership_skill_9" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="leadership_skill_9" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="leadership_skill_9" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+   -->
+		<!--
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I get upset and worried quite often in the workplace.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="leadership_skill_10" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="leadership_skill_10" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="leadership_skill_10" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="leadership_skill_10" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="leadership_skill_10" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  My actions show people what I want from them.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="leadership_skill_11" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="leadership_skill_11" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="leadership_skill_11" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="leadership_skill_11" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="leadership_skill_11" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  When working with a team, I encourage everyone to work toward the same overall objectives.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="leadership_skill_12" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="leadership_skill_12" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="leadership_skill_12" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="leadership_skill_12" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="leadership_skill_12" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I make exceptions to my rules and expectations. It's easier than being the enforcer all the time!
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="leadership_skill_13" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="leadership_skill_13" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="leadership_skill_13" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="leadership_skill_13" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="leadership_skill_13" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I enjoy planning for the future.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="leadership_skill_14" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="leadership_skill_14" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="leadership_skill_14" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="leadership_skill_14" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="leadership_skill_14" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+   -->
+
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  I feel threatened when someone criticizes me.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class=" form-check mb-4">
+			  <input class="" name="leadership_skill_6" type="radio" required id="q1" value="5">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="leadership_skill_6" type="radio" required id="q2" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="leadership_skill_6" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="leadership_skill_6" type="radio" required id="q4" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="leadership_skill_6" type="radio" required id="q5" value="1">
+			</div>
+		  </div>
+
+		</div>
+		<!--
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I make time to learn what people need from me, so that they can be successful.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="leadership_skill_16" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="leadership_skill_16" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="leadership_skill_16" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="leadership_skill_16" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="leadership_skill_16" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+   -->
+
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  I'm optimistic about life, and I can see beyond temporary setbacks and problems.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class=" form-check mb-4">
+			  <input class="" name="leadership_skill_7" type="radio" required id="q1" value="1">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="leadership_skill_7" type="radio" required id="q2" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="leadership_skill_7" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="leadership_skill_7" type="radio" required id="q4" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="leadership_skill_7" type="radio" required id="q5" value="5">
+			</div>
+		  </div>
+
+		</div>
+
+		<!--
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I think that teams perform best when individuals keep doing the same tasks and perfecting them, instead of
+						  learning new skills and challenging themselves.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="leadership_skill_18" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="leadership_skill_18" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="leadership_skill_18" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="leadership_skill_18" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="leadership_skill_18" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+				  -->
+	  </div>
+
+	  <div class="tab">
+		<!--
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I try to anticipate and predict possible causes of confusion, and I deal with them up front.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="communication_skill_1" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="communication_skill_1" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="communication_skill_1" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="communication_skill_1" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="communication_skill_1" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  When I write a memo, email, or other document, I give all of the background information and detail I can to make
+						  sure that my message is understood.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="communication_skill_2" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="communication_skill_2" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="communication_skill_2" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="communication_skill_2" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="communication_skill_2" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+   -->
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  If I don't understand something, I tend to keep this to myself and figure it out later.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class=" form-check mb-4">
+			  <input class="" name="communication_skill_1" type="radio" required id="q1" value="5">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="communication_skill_1" type="radio" required id="q2" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="communication_skill_1" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="communication_skill_1" type="radio" required id="q4" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="communication_skill_1" type="radio" required id="q5" value="1">
+			</div>
+		  </div>
+
+		</div>
+
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  I'm surprised to find that people haven't understood what I've said
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="communication_skill_2" type="radio" required id="q1" value="5">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="communication_skill_2" type="radio" required id="q2" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="communication_skill_2" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="communication_skill_2" type="radio" required id="q4" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="communication_skill_2" type="radio" required id="q5" value="1">
+			</div>
+		  </div>
+
+		</div>
+
+
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  I can tend to say what I think, without worrying about how the other person perceives it. I assume that
+			  we'll be
+			  able to
+			  work it out later.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="communication_skill_3" type="radio" required id="q1" value="5">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="communication_skill_3" type="radio" required id="q2" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="communication_skill_3" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="communication_skill_3" type="radio" required id="q4" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="communication_skill_3" type="radio" required id="q5" value="1">
+			</div>
+		  </div>
+
+		</div>
+
+
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  When people talk to me, I try to see their perspectives and body language.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class=" form-check mb-4">
+			  <input class="" name="communication_skill_4" type="radio" required id="q1" value="1">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="communication_skill_4" type="radio" required id="q2" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="communication_skill_4" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="communication_skill_4" type="radio" required id="q4" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="communication_skill_4" type="radio" required id="q5" value="5">
+			</div>
+		  </div>
+
+		</div>
+
+		<!--
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I use email to communicate complex issues with people. It's quick and efficient.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="communication_skill_7" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="communication_skill_7" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="communication_skill_7" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="communication_skill_7" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="communication_skill_7" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  When I finish writing a report, memo, or email, I scan it quickly for typos and so forth, and then send it off
+						  right
+						  away.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="communication_skill_8" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="communication_skill_8" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="communication_skill_8" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="communication_skill_8" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="communication_skill_8" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  When talking to people, I pay attention to their body language.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="communication_skill_9" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="communication_skill_9" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="communication_skill_9" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="communication_skill_9" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="communication_skill_9" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I use diagrams and charts to help express my ideas.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="communication_skill_10" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="communication_skill_10" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="communication_skill_10" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="communication_skill_10" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="communication_skill_10" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  Before I communicate, I think about what the person needs to know, and how best to convey it.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="communication_skill_11" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="communication_skill_11" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="communication_skill_11" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="communication_skill_11" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="communication_skill_11" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  When someone's talking to me, I think about what I'm going to say next to make sure I get my point across
+						  correctly.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="communication_skill_12" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="communication_skill_12" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="communication_skill_12" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="communication_skill_12" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="communication_skill_12" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  Before I send a message, I think about the best way to communicate it (in person, over the phone, in a
+						  newsletter, via
+						  memo, and soon).
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="communication_skill_13" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="communication_skill_13" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="communication_skill_13" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="communication_skill_13" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="communication_skill_13" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I try to help people understand the underlying concepts behind the point I am discussing. This reduces
+						  misconceptions
+						  and increases understanding.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="communication_skill_14" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="communication_skill_14" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="communication_skill_14" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="communication_skill_14" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="communication_skill_14" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+   -->
+
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  I consider cultural barriers when planning my communications.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class=" form-check mb-4">
+			  <input class="" name="communication_skill_5" type="radio" required id="q1" value="1">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="communication_skill_5" type="radio" required id="q2" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="communication_skill_5" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="communication_skill_5" type="radio" required id="q4" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="communication_skill_5" type="radio" required id="q5" value="5">
+			</div>
+		  </div>
+
+		</div>
+
+
+	  </div>
+
+	  <div class="tab">
+
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  I read selectively, skimming the material until I find what is important, then highlighting it.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="time_management_skill_1" type="radio" required id="q1" value="1">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="time_management_skill_1" type="radio" required id="q2" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="time_management_skill_1" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="time_management_skill_1" type="radio" required id="q4" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="time_management_skill_1" type="radio" required id="q5" value="5">
+			</div>
+		  </div>
+
+		</div>
+
+
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  I set deadlines for myself and make a list of tasks to accomplish each day.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="time_management_skill_2" type="radio" required id="q1" value="1">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="time_management_skill_2" type="radio" required id="q2" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="time_management_skill_2" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="time_management_skill_2" type="radio" required id="q4" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="time_management_skill_2" type="radio" required id="q5" value="5">
+			</div>
+		  </div>
+
+		</div>
+		<!--
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I keep everything in its proper place at work.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="time_management_skill_3" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_3" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_3" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_3" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_3" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+   -->
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  I prioritize the tasks I have to do according to their importance and urgency.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="time_management_skill_3" type="radio" required id="q1" value="1">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="time_management_skill_3" type="radio" required id="q2" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="time_management_skill_3" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="time_management_skill_3" type="radio" required id="q4" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="time_management_skill_3" type="radio" required id="q5" value="5">
+			</div>
+		  </div>
+
+		</div>
+
+		<!--
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I concentrate on only one important task at a time, but I do multiple trivial tasks at once (such as signing
+						  letters
+						  while talking on the phone).
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_5" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_5" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_5" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_5" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_5" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I make a list of short five-or ten-minute tasks to do.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="time_management_skill_6" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_6" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_6" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_6" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_6" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I divide large projects into smaller, separate stages.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="time_management_skill_7" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_7" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_7" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_7" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_7" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I identify which 20 percent of my tasks will produce 80 percent of the results.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="time_management_skill_8" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_8" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_8" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_8" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_8" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I do the most important tasks at my best time during the day.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="time_management_skill_9" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_9" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_9" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_9" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_9" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I have some time during each day when I can work uninterrupted.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="time_management_skill_10" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_10" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_10" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_10" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_10" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+   -->
+
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  I do today what needs to be done. I don’t procrastinate.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class=" form-check mb-4">
+			  <input class="" name="time_management_skill_4" type="radio" required id="q1" value="1">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="time_management_skill_4" type="radio" required id="q2" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="time_management_skill_4" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="time_management_skill_4" type="radio" required id="q4" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="time_management_skill_4" type="radio" required id="q5" value="5">
+			</div>
+		  </div>
+
+		</div>
+
+
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  I periodically evaluate the use of my time and continually try to find little ways to use my time more
+			  efficiently.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class=" form-check mb-4">
+			  <input class="" name="time_management_skill_5" type="radio" required id="q1" value="1">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="time_management_skill_5" type="radio" required id="q2" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="time_management_skill_5" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="time_management_skill_5" type="radio" required id="q4" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="time_management_skill_5" type="radio" required id="q5" value="5">
+			</div>
+		  </div>
+
+		</div>
+
+		<!--
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I set deadlines for myself.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="time_management_skill_13" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_13" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_13" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_13" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_13" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I do something productive whenever I am waiting.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="time_management_skill_14" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_14" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_14" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_14" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_14" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I do redundant "busy work" at oneset time during the day.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="time_management_skill_15" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_15" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_15" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_15" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_15" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+   -->
+
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  I finish at least one thing every day.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class=" form-check mb-4">
+			  <input class="" name="time_management_skill_6" type="radio" required id="q1" value="1">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="time_management_skill_6" type="radio" required id="q2" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="time_management_skill_6" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="time_management_skill_6" type="radio" required id="q4" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="time_management_skill_6" type="radio" required id="q5" value="5">
+			</div>
+		  </div>
+
+		</div>
+
+
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  I schedule some time during the day for personal time alone (for planning, meditation, prayer, exercise).
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class=" form-check mb-4">
+			  <input class="" name="time_management_skill_7" type="radio" required id="q1" value="1">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="time_management_skill_7" type="radio" required id="q2" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="time_management_skill_7" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="time_management_skill_7" type="radio" required id="q4" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="time_management_skill_7" type="radio" required id="q5" value="5">
+			</div>
+		  </div>
+
+		</div>
+
+		<!--
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I allow myself to worry about things only at one particular time during the day, not all the time.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="time_management_skill_18" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_18" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_18" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_18" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_18" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+   -->
+
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  I have clearly defined long-term objectives toward which I am working.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class=" form-check mb-4">
+			  <input class="" name="time_management_skill_8" type="radio" required id="q1" value="1">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="time_management_skill_8" type="radio" required id="q2" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="time_management_skill_8" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="time_management_skill_8" type="radio" required id="q4" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="time_management_skill_8" type="radio" required id="q5" value="5">
+			</div>
+		  </div>
+
+		</div>
+
+		<!--
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I continually try to find little ways to use my time more efficiently.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="time_management_skill_20" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_20" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_20" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_20" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="time_management_skill_20" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+   -->
+	  </div>
+
+	  <div class="tab">
+
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  Once I choose a solution, I develop an implementation plan with the sequence of events necessary for
+			  completion.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="problem_solving_skill_1" type="radio" required id="q1" value="1">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="problem_solving_skill_1" type="radio" required id="q2" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="problem_solving_skill_1" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="problem_solving_skill_1" type="radio" required id="q4" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="problem_solving_skill_1" type="radio" required id="q5" value="5">
+			</div>
+		  </div>
+
+		</div>
+
+		<!--
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  After a solution has been implemented, I immediately look for ways to improve the idea and avoid future
+						  problems.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="problem_solving_skill_2" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="problem_solving_skill_2" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="problem_solving_skill_2" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="problem_solving_skill_2" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="problem_solving_skill_2" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+   -->
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  To avoid asking the wrong question, I take care to define each problem carefully before trying to solve
+			  it.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class=" form-check mb-4">
+			  <input class="" name="problem_solving_skill_2" type="radio" required id="q1" value="1">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="problem_solving_skill_2" type="radio" required id="q2" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="problem_solving_skill_2" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="problem_solving_skill_2" type="radio" required id="q4" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="problem_solving_skill_2" type="radio" required id="q5" value="5">
+			</div>
+		  </div>
+
+		</div>
+
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  I strive to look at problems from different perspectives and generate multiple solutions.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="problem_solving_skill_3" type="radio" required id="q1" value="1">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="problem_solving_skill_3" type="radio" required id="q2" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="problem_solving_skill_3" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="problem_solving_skill_3" type="radio" required id="q4" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="problem_solving_skill_3" type="radio" required id="q5" value="5">
+			</div>
+		  </div>
+
+		</div>
+
+		<!--
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I try to address the political issues and other consequences of the change I’m proposing so that others will
+						  understand
+						  and support my solution.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="problem_solving_skill_5" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="problem_solving_skill_5" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="problem_solving_skill_5" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="problem_solving_skill_5" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="problem_solving_skill_5" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I evaluate potential solutions carefully and thoroughly against a predefined standard.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="problem_solving_skill_6" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="problem_solving_skill_6" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="problem_solving_skill_6" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="problem_solving_skill_6" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="problem_solving_skill_6" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+				   -->
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  I systematically search for issues that may become problems in the future.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class=" form-check mb-4">
+			  <input class="" name="problem_solving_skill_4" type="radio" required id="q1" value="1">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="problem_solving_skill_4" type="radio" required id="q2" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="problem_solving_skill_4" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="problem_solving_skill_4" type="radio" required id="q4" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="problem_solving_skill_4" type="radio" required id="q5" value="5">
+			</div>
+		  </div>
+
+		</div>
+
+
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  When I decide on a solution, I make it happen –no matter what opposition I may face.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class=" form-check mb-4">
+			  <input class="" name="problem_solving_skill_5" type="radio" required id="q1" value="5">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="problem_solving_skill_5" type="radio" required id="q2" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="problem_solving_skill_5" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="problem_solving_skill_5" type="radio" required id="q4" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="problem_solving_skill_5" type="radio" required id="q5" value="1">
+			</div>
+		  </div>
+
+		</div>
+
+		<!--
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I find that small problems often become much bigger in scope, and thus very difficult to solve.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="problem_solving_skill_9" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="problem_solving_skill_9" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="problem_solving_skill_9" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="problem_solving_skill_9" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="problem_solving_skill_9" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I ask myself lots of different questions about the nature of the problem.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="problem_solving_skill_10" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="problem_solving_skill_10" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="problem_solving_skill_10" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="problem_solving_skill_10" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="problem_solving_skill_10" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  After my solution is implemented, I relax and focus again on my regular duties.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="problem_solving_skill_11" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="problem_solving_skill_11" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="problem_solving_skill_11" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="problem_solving_skill_11" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="problem_solving_skill_11" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I focus on keeping current operations running smoothly and hope that problems don’t appear.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="problem_solving_skill_12" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="problem_solving_skill_12" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="problem_solving_skill_12" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="problem_solving_skill_12" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="problem_solving_skill_12" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I evaluate potential solutions as I think of them.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="problem_solving_skill_13" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="problem_solving_skill_13" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="problem_solving_skill_13" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="problem_solving_skill_13" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="problem_solving_skill_13" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  When I need to find a solution to a problem, I usually have all of the information I need to solve it.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="problem_solving_skill_14" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="problem_solving_skill_14" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="problem_solving_skill_14" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="problem_solving_skill_14" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="problem_solving_skill_14" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  When evaluating solutions, I take time to think about how I should choose between options.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="problem_solving_skill_15" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="problem_solving_skill_15" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="problem_solving_skill_15" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="problem_solving_skill_15" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="problem_solving_skill_15" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  Making a decision is the end of my problem-solving process.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="problem_solving_skill_16" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="problem_solving_skill_16" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="problem_solving_skill_16" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="problem_solving_skill_16" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="problem_solving_skill_16" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+				   -->
+
+	  </div>
+
+	  <div class="tab">
+
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  I feel overwhelmed by too many tasks and responsibilities-juggling priorities or feel pressured by too
+			  many demands from
+			  clients/ customers/ boss.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_management_skill_1" type="radio" required id="q1" value="5">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_management_skill_1" type="radio" required id="q2" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_management_skill_1" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_management_skill_1" type="radio" required id="q4" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_management_skill_1" type="radio" required id="q5" value="1">
+			</div>
+		  </div>
+
+		</div>
+
+		<!--
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I am very busy and impatient.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_2" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_2" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_2" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_2" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_2" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  The closer the deadlines, the harder I work
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="self_management_skill_3" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_3" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_3" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_3" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_3" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I have to cope with too many organizational or job task changes.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_4" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_4" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_4" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_4" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_4" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I am drowning in an overload of information from mail, faxes, E-mail, the Internet.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_5" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_5" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_5" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_5" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_5" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I feel pressured by too many demands from clients/customers /boss.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="self_management_skill_6" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_6" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_6" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_6" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_6" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I dislike turning over responsibility to others.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="self_management_skill_7" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_7" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_7" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_7" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_7" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I find it difficult to stay agile, flexible, and resilient and focus on what is important.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="self_management_skill_8" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_8" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_8" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_8" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_8" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  Worry robs me of time and energy.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="self_management_skill_9" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_9" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_9" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_9" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_9" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+				  -->
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  I have difficulty making decisions affecting my work and the work of associates.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class=" form-check mb-4">
+			  <input class="" name="self_management_skill_2" type="radio" required id="q1" value="5">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_management_skill_2" type="radio" required id="q2" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_management_skill_2" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_management_skill_2" type="radio" required id="q4" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_management_skill_2" type="radio" required id="q5" value="1">
+			</div>
+		  </div>
+
+		</div>
+
+
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  I'm frequently late for appointments or meetings
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class=" form-check mb-4">
+			  <input class="" name="self_management_skill_3" type="radio" required id="q1" value="5">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_management_skill_3" type="radio" required id="q2" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_management_skill_3" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_management_skill_3" type="radio" required id="q4" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_management_skill_3" type="radio" required id="q5" value="1">
+			</div>
+		  </div>
+
+		</div>
+
+		<!--
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  My “B” and “C” priorities take so much time that I rarely get to the “A's”.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="self_management_skill_12" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_12" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_12" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_12" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_12" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I set deadlines for myself.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="self_management_skill_13" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_13" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_13" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_13" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_13" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+				   -->
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  I put things off until it's too late, or no longer matters.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class=" form-check mb-4">
+			  <input class="" name="self_management_skill_4" type="radio" required id="q1" value="5">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_management_skill_4" type="radio" required id="q2" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_management_skill_4" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_management_skill_4" type="radio" required id="q4" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_management_skill_4" type="radio" required id="q5" value="1">
+			</div>
+		  </div>
+
+		</div>
+
+		<!--
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I look at projects as a whole, rather than breaking them up into smaller units
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="self_management_skill_15" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_15" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_15" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_15" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_15" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I am sleep deprived and do not feel rested in the morning.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="self_management_skill_16" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_16" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_16" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_16" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_16" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I feel that my work does not reflect my vision, mission, and values.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="self_management_skill_17" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_17" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_17" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_17" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_17" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  My behavior is incongruent with what I truly believe.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="self_management_skill_18" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_18" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_18" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_18" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="self_management_skill_18" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+				   -->
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  Planning my day-every day is difficult for me.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class=" form-check mb-4">
+			  <input class="" name="self_management_skill_5" type="radio" required id="q1" value="5">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_management_skill_5" type="radio" required id="q2" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_management_skill_5" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_management_skill_5" type="radio" required id="q4" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_management_skill_5" type="radio" required id="q5" value="1">
+			</div>
+		  </div>
+
+		</div>
+
+
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  I am unable to establish a clear direction and develop personal and career goals.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class=" form-check mb-4">
+			  <input class="" name="self_management_skill_6" type="radio" required id="q1" value="5">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_management_skill_6" type="radio" required id="q2" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_management_skill_6" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_management_skill_6" type="radio" required id="q4" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_management_skill_6" type="radio" required id="q5" value="1">
+			</div>
+		  </div>
+
+		</div>
+
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  I find it difficult to create a health work and life balance.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class=" form-check mb-4">
+			  <input class="" name="self_management_skill_7" type="radio" required id="q1" value="5">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_management_skill_7" type="radio" required id="q2" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_management_skill_7" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_management_skill_7" type="radio" required id="q4" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_management_skill_7" type="radio" required id="q5" value="1">
+			</div>
+		  </div>
+
+		</div>
+
+	  </div>
+
+	  <div class="tab">
+
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  I am effective with the detailed aspects of my work.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="decision_making_skill_1" type="radio" required id="q1" value="1">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="decision_making_skill_1" type="radio" required id="q2" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="decision_making_skill_1" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="decision_making_skill_1" type="radio" required id="q4" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="decision_making_skill_1" type="radio" required id="q5" value="5">
+			</div>
+		  </div>
+
+		</div>
+
+		<!--
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I usually know ahead of time how people will respond to a new idea or proposal.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="decision_making_skill_2" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="decision_making_skill_2" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="decision_making_skill_2" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="decision_making_skill_2" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="decision_making_skill_2" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I am effective at problem solving.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="decision_making_skill_3" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="decision_making_skill_3" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="decision_making_skill_3" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="decision_making_skill_3" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="decision_making_skill_3" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  Filling out forms and working with details comes easily for me.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="decision_making_skill_4" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="decision_making_skill_4" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="decision_making_skill_4" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="decision_making_skill_4" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="decision_making_skill_4" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  Understanding the social fabric of the organization is important to me.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="decision_making_skill_5" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="decision_making_skill_5" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="decision_making_skill_5" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="decision_making_skill_5" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="decision_making_skill_5" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+				   -->
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  When problems arise, I immediately address them.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class=" form-check mb-4">
+			  <input class="" name="decision_making_skill_2" type="radio" required id="q1" value="1">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="decision_making_skill_2" type="radio" required id="q2" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="decision_making_skill_2" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="decision_making_skill_2" type="radio" required id="q4" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="decision_making_skill_2" type="radio" required id="q5" value="5">
+			</div>
+		  </div>
+
+		</div>
+
+
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  Managing people and resources is one of my strengths.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class=" form-check mb-4">
+			  <input class="" name="decision_making_skill_3" type="radio" required id="q1" value="1">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="decision_making_skill_3" type="radio" required id="q2" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="decision_making_skill_3" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="decision_making_skill_3" type="radio" required id="q4" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="decision_making_skill_3" type="radio" required id="q5" value="5">
+			</div>
+		  </div>
+
+		</div>
+
+
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  I am able to sense the emotional undercurrents in my group.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class=" form-check mb-4">
+			  <input class="" name="decision_making_skill_4" type="radio" required id="q1" value="1">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="decision_making_skill_4" type="radio" required id="q2" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="decision_making_skill_4" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="decision_making_skill_4" type="radio" required id="q4" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="decision_making_skill_4" type="radio" required id="q5" value="5">
+			</div>
+		  </div>
+
+		</div>
+
+		<!--
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  Seeing the big picture comes easily for me.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="decision_making_skill_9" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="decision_making_skill_9" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="decision_making_skill_9" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="decision_making_skill_9" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="decision_making_skill_9" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+				   -->
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  In my work, I enjoy responding to people’s requests and concerns.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class=" form-check mb-4">
+			  <input class="" name="decision_making_skill_5" type="radio" required id="q1" value="1">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="decision_making_skill_5" type="radio" required id="q2" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="decision_making_skill_5" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="decision_making_skill_5" type="radio" required id="q4" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="decision_making_skill_5" type="radio" required id="q5" value="5">
+			</div>
+		  </div>
+
+		</div>
+
+		<!--
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I use my emotional energy to motivate others.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="decision_making_skill_11" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="decision_making_skill_11" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="decision_making_skill_11" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="decision_making_skill_11" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="decision_making_skill_11" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  Making strategic plans for my company appeals to me.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="decision_making_skill_12" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="decision_making_skill_12" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="decision_making_skill_12" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="decision_making_skill_12" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="decision_making_skill_12" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  Obtaining and allocating resources is a challenging aspect of my job.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="decision_making_skill_13" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="decision_making_skill_13" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="decision_making_skill_13" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="decision_making_skill_13" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="decision_making_skill_13" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  The key to successful conflict resolution is respecting my opponent.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="decision_making_skill_14" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="decision_making_skill_14" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="decision_making_skill_14" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="decision_making_skill_14" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="decision_making_skill_14" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I enjoy discussing organizational values and philosophy.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="decision_making_skill_15" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="decision_making_skill_15" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="decision_making_skill_15" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="decision_making_skill_15" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="decision_making_skill_15" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+
+					<div class="row question">
+
+					  <div class="col-md-4">
+						<div class="question-atts form-check font-weight-bold mb-4">
+						  I am effective at obtaining resources to support our programs.
+						</div>
+					  </div>
+
+					  <div class="col col-centered">
+						<div class=" form-check mb-4">
+						  <input class="" name="decision_making_skill_16" type="radio" required id="q1" value="1">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="decision_making_skill_16" type="radio" required id="q2" value="2">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="decision_making_skill_16" type="radio" required id="q3" value="3">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="decision_making_skill_16" type="radio" required id="q4" value="4">
+						</div>
+					  </div>
+					  <div class="col col-centered">
+						<div class="form-check mb-4">
+						  <input class="" name="decision_making_skill_16" type="radio" required id="q5" value="5">
+						</div>
+					  </div>
+
+					</div>
+
+				   -->
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  I work hard to find consensus in conflict situations.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class=" form-check mb-4">
+			  <input class="" name="decision_making_skill_6" type="radio" required id="q1" value="1">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="decision_making_skill_6" type="radio" required id="q2" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="decision_making_skill_6" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="decision_making_skill_6" type="radio" required id="q4" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="decision_making_skill_6" type="radio" required id="q5" value="5">
+			</div>
+		  </div>
+
+		</div>
+
+
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  I am flexible about making changes in our organization.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class=" form-check mb-4">
+			  <input class="" name="decision_making_skill_7" type="radio" required id="q1" value="1">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="decision_making_skill_7" type="radio" required id="q2" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="decision_making_skill_7" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="decision_making_skill_7" type="radio" required id="q4" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="decision_making_skill_7" type="radio" required id="q5" value="5">
+			</div>
+		  </div>
+
+		</div>
+	  </div>
+
+	  <div class="tab">
+
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  Team problem solving results in effective solutions.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="team_work_skill_1" type="radio" required id="q1" value="1">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="team_work_skill_1" type="radio" required id="q2" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="team_work_skill_1" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="team_work_skill_1" type="radio" required id="q4" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="team_work_skill_1" type="radio" required id="q5" value="5">
+			</div>
+		  </div>
+
+		</div>
+
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  Team members take personal responsibility for the effectiveness of our team.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="team_work_skill_2" type="radio" required id="q1" value="1">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="team_work_skill_2" type="radio" required id="q2" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="team_work_skill_2" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="team_work_skill_2" type="radio" required id="q4" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="team_work_skill_2" type="radio" required id="q5" value="5">
+			</div>
+		  </div>
+
+		</div>
+
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  We are strongly committed to a shared mission
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class=" form-check mb-4">
+			  <input class="" name="team_work_skill_3" type="radio" required id="q1" value="1">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="team_work_skill_3" type="radio" required id="q2" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="team_work_skill_3" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="team_work_skill_3" type="radio" required id="q4" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="team_work_skill_3" type="radio" required id="q5" value="5">
+			</div>
+		  </div>
+
+		</div>
+
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  We address and resolve issues quickly.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="team_work_skill_4" type="radio" required id="q1" value="1">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="team_work_skill_4" type="radio" required id="q2" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="team_work_skill_4" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="team_work_skill_4" type="radio" required id="q4" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="team_work_skill_4" type="radio" required id="q5" value="5">
+			</div>
+		  </div>
+
+		</div>
+
+
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  Team members maintain a can-do approach when they encounter frustrating situations.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="team_work_skill_5" type="radio" required id="q1" value="1">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="team_work_skill_5" type="radio" required id="q2" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="team_work_skill_5" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="team_work_skill_5" type="radio" required id="q4" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="team_work_skill_5" type="radio" required id="q5" value="5">
+			</div>
+		  </div>
+		</div>
+	  </div>
+
+	  <div class="tab">
+
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  I feel like I am a person of worth, at least on an equal plan with others.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_confidence_skill_1" type="radio" required id="q1" value="1">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_confidence_skill_1" type="radio" required id="q2" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_confidence_skill_1" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_confidence_skill_1" type="radio" required id="q4" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_confidence_skill_1" type="radio" required id="q5" value="5">
+			</div>
+		  </div>
+
+		</div>
+
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  I feel that I have a number of good qualities.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_confidence_skill_2" type="radio" required id="q1" value="1">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_confidence_skill_2" type="radio" required id="q2" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_confidence_skill_2" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_confidence_skill_2" type="radio" required id="q4" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_confidence_skill_2" type="radio" required id="q5" value="5">
+			</div>
+		  </div>
+
+		</div>
+
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  I feel I do not have much to be proud of.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class=" form-check mb-4">
+			  <input class="" name="self_confidence_skill_3" type="radio" required id="q1" value="5">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_confidence_skill_3" type="radio" required id="q2" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_confidence_skill_3" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_confidence_skill_3" type="radio" required id="q4" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_confidence_skill_3" type="radio" required id="q5" value="1">
+			</div>
+		  </div>
+
+		</div>
+
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  I wish I could have more respect for myself.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_confidence_skill_4" type="radio" required id="q1" value="5">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_confidence_skill_4" type="radio" required id="q2" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_confidence_skill_4" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_confidence_skill_4" type="radio" required id="q4" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_confidence_skill_4" type="radio" required id="q5" value="1">
+			</div>
+		  </div>
+
+		</div>
+
+
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  At times, I think I am no good at all.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_confidence_skill_5" type="radio" required id="q1" value="5">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_confidence_skill_5" type="radio" required id="q2" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_confidence_skill_5" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_confidence_skill_5" type="radio" required id="q4" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="self_confidence_skill_5" type="radio" required id="q5" value="1">
+			</div>
+		  </div>
+		</div>
+	  </div>
+
+	  <div class="tab">
+
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  If I have a problem, I allow myself to back off active problem solving, and I create some mental distance
+			  between myself
+			  and the issue.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="creativity_skill_1" type="radio" required id="q1" value="1">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="creativity_skill_1" type="radio" required id="q2" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="creativity_skill_1" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="creativity_skill_1" type="radio" required id="q4" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="creativity_skill_1" type="radio" required id="q5" value="5">
+			</div>
+		  </div>
+
+		</div>
+
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  As soon as I have a good idea, I move forward with implementation.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="creativity_skill_2" type="radio" required id="q1" value="1">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="creativity_skill_2" type="radio" required id="q2" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="creativity_skill_2" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="creativity_skill_2" type="radio" required id="q4" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="creativity_skill_2" type="radio" required id="q5" value="5">
+			</div>
+		  </div>
+
+		</div>
+
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  I'm confident that I can develop creative ideas to solve problems, and I'm motivated to implement
+			  solutions.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class=" form-check mb-4">
+			  <input class="" name="creativity_skill_3" type="radio" required id="q1" value="1">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="creativity_skill_3" type="radio" required id="q2" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="creativity_skill_3" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="creativity_skill_3" type="radio" required id="q4" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="creativity_skill_3" type="radio" required id="q5" value="5">
+			</div>
+		  </div>
+
+		</div>
+
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  I take time to investigate how things are working, even when there are no current problems.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="creativity_skill_4" type="radio" required id="q1" value="1">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="creativity_skill_4" type="radio" required id="q2" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="creativity_skill_4" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="creativity_skill_4" type="radio" required id="q4" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="creativity_skill_4" type="radio" required id="q5" value="5">
+			</div>
+		  </div>
+
+		</div>
+
+
+		<div class="row question">
+
+		  <div class="col-md-4">
+			<div class="question-atts form-check font-weight-bold mb-4">
+			  When I generate ideas, I evaluate them and I quickly discard ideas that I don't like.
+			</div>
+		  </div>
+
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="creativity_skill_5" type="radio" required id="q1" value="1">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="creativity_skill_5" type="radio" required id="q2" value="2">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="creativity_skill_5" type="radio" required id="q3" value="3">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="creativity_skill_5" type="radio" required id="q4" value="4">
+			</div>
+		  </div>
+		  <div class="col col-centered">
+			<div class="form-check mb-4">
+			  <input class="" name="creativity_skill_5" type="radio" required id="q5" value="5">
+			</div>
+		  </div>
+
+		</div>
+
+	  </div>
+	  <div style="overflow:auto;">
+		<div style="float:right;" class="m-r-100">
+		  <button class="m-r-20 btn btn-lg btn-outline-info waves-effect waves-light" type="button" id="prevBtn"
+			onclick="nextPrev(-1)">Previous</button>
+		  <button class="btn btn-lg btn-outline-info waves-effect waves-light" type="button" id="nextBtn"
+			onclick="nextPrev(1)">Next</button>
+		  <!-- <button type="button" id="nextBtn" onClick="alertClick(1)">Next</button> -->
+		</div>
+	  </div>
+
+	  <!-- Circles which indicates the steps of the form: -->
+	  <div style="text-align:center;margin-top:40px;">
+		<span class="step"></span>
+		<span class="step"></span>
+		<span class="step"></span>
+		<span class="step"></span>
+		<span class="step"></span>
+		<span class="step"></span>
+		<span class="step"></span>
+		<span class="step"></span>
+		<span class="step"></span>
+		<span class="step"></span>
+	  </div>
+
+	  <hr>
+	  <div class="row">
+
+		<div class="col-md-3 clearfix mt-5 mb-5 fs-20">
+		  <button type="submit" style="max-width: 20vw;font-size: 18px;" class="login100-form-btn " name='submitTest'
+			id='submitTest'>
+			Submit
+		  </button>
+		</div>
+		<div class="col-md-3 clearfix mt-5 mb-5 fs-20">
+		  <a href="{{ url_for('profile')}}">
+			<button type="button" style="max-width: 20vw;font-size: 18px;" class="login100-form-btn-cancel"
+			  name='cancelTest' id='cancelsubmitTest'>
+			  Cancel
+			</button>
+		  </a>
+		</div>
+	  </div>
+
+	</form>
+  </div>
+</div>
+</div>
+
+{% endblock %}
+
+{% block script %}
+<script src="/static/js/pagenav.js"></script>
+
+{% endblock %}

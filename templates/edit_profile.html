@@ -1,0 +1,246 @@
+{% extends "layout.html" %} {% block body %}
+
+<!-- MAIN BODY -->
+<div class="limiter">
+
+
+
+	<div class="container-login100" style="margin-top: -100px">
+		<!-- <div  class="wrap-login100  "> -->
+
+
+		<form method="POST" name="signup_form" class="login100-form validate-form" autocomplete="off">
+
+			<span class="login100-form-title p-b-23 m-t-0">
+				<a id="shw2" href="{{ url_for('index')}}">
+					<span class="fa fa-arrow-left" style="margin-left: -40px; font-size: 30px">&nbsp;&nbsp;</span>
+				</a>
+				Edit your profile details
+			</span>
+
+			<div class="row m-t-10 m-l-0">
+				<div class="col-md-12 marg">
+					<div class="profile-head row m-t-20">
+						<div class="col-md-3" style="margin-right: -100px">
+							<h4><b>Name:</b></h4>
+						</div>
+						<div class="col">
+							<h3>
+								{{ session['user']['fname'] + ' ' + session['user']['lname'] }}
+							</h3>
+						</div>
+					</div>
+					<div class="profile-head row m-t-20">
+						<div class="col-md-3" style="margin-right: -100px">
+							<h4><b>Email:</b></h4>
+						</div>
+						<div class="col">
+							<h3>{{ session['user']['email'] }}</h3>
+						</div>
+					</div>
+					<div class="profile-head row m-t-20">
+						<div class="col-md-3" style="margin-right: -100px">
+							<h4><b>Employment Status :</b></h4>
+						</div>
+						<div class="col">
+							<h3>{{ session['user']['emp_status'] }}</h3>
+						</div>
+					</div>
+					<div class="profile-head row m-t-20">
+						<div class="col-md-3" style="margin-right: -100px">
+							<h4><b> Package :</b></h4>
+						</div>
+						<div class="col">
+							<h3>{{ session['user']['package'] }}</h3>
+						</div>
+					</div>
+					<div class="profile-head row m-t-80">
+						<div class="col-md-5" style="margin-right: -750px">
+							<h4><b>Semester Scores(pointers):</b></h4>
+						</div>
+						<div class="col-md-7">
+							<div class="row m-t-30">
+								<table class="table table-borderless m-t-20" style="font-size: 22px">
+									<tr>
+										<th scope="col" class="p-l-15 p-r-15"></th>
+										<th scope="col" class="p-l-15 p-r-15">Sem 1</th>
+										<th scope="col" class="p-l-15 p-r-15">Sem 2</th>
+										<th scope="col" class="p-l-15 p-r-15">Sem 3</th>
+										<th scope="col" class="p-l-15 p-r-15">Sem 4</th>
+										<th scope="col" class="p-l-15 p-r-15">Sem 5</th>
+										<th scope="col" class="p-l-15 p-r-15">Sem 6</th>
+										<th scope="col" class="p-l-15 p-r-15">Sem 7</th>
+										<th scope="col" class="p-l-15 p-r-15">Sem 8</th>
+									</tr>
+									<tbody>
+										<tr>
+											<td scope="row" class="p-l-15 p-r-15"><b>Pointers:</b></td>
+											<td scope="row" class="p-l-15 p-r-15">
+												{{ session['user']['marks']['sem1']}}
+											</td>
+											<td scope="row" class="p-l-15 p-r-15">
+												{{ session['user']['marks']['sem2']}}
+											</td>
+											<td scope="row" class="p-l-15 p-r-15">
+												{{ session['user']['marks']['sem3']}}
+											</td>
+											<td scope="row" class="p-l-15 p-r-15">
+												{{ session['user']['marks']['sem4']}}
+											</td>
+											<td scope="row" class="p-l-15 p-r-15">
+												{{ session['user']['marks']['sem5']}}
+											</td>
+											<td scope="row" class="p-l-15 p-r-15">
+												{{ session['user']['marks']['sem6']}}
+											</td>
+											<td scope="row" class="p-l-15 p-r-15">
+												{{ session['user']['marks']['sem7']}}
+											</td>
+											<td scope="row" class="p-l-15 p-r-15">
+												{{ session['user']['marks']['sem8']}}
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+
+					<div class="container-login100-form-btn m-t-120 editFormbutton toggleEdit" style="max-width: 300px">
+						<input type="button" style="font-size: 20px" class="btn login100-form-btn" name="toggleEdit"
+							value="Edit Profile" id="toggleEdit"
+							data-empstatus="{{ session['user']['emp_status']  }}"
+							data-package = "{{ session['user']['package'] }}" />
+					</div>
+
+				</div>
+			</div>
+
+			<div class='editForm'>
+
+				<span class="login100-form-title p-b-43 p-t-46">
+					Enter Your Marks and other details:
+				</span>
+				<div class="row">
+					<div class="col-md-3">
+						Semester 1:
+						<div class="wrap-input100 validate-input" placeholder="Enter first name">
+							<input class="input100" type="number" name="edit_sem1_score"
+								value="{{ session['user']['marks']['sem1']}}" autocomplete="off" />
+						</div>
+					</div>
+					<div class="col-md-3">
+						Semester 2:
+						<div class="wrap-input100 validate-input">
+							<input class="input100" type="number" name="edit_sem2_score"
+								value="{{ session['user']['marks']['sem2']}}" autocomplete="off" />
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3">
+						Semester 3:
+						<div class="wrap-input100 validate-input">
+							<input class="input100" type="number" name="edit_sem3_score"
+								value="{{ session['user']['marks']['sem3']}}" autocomplete="off" />
+						</div>
+					</div>
+					<div class="col-md-3">
+						Semester 4:
+						<div class="wrap-input100 validate-input">
+							<input class="input100" type="number" name="edit_sem4_score"
+								value="{{ session['user']['marks']['sem4']}}" autocomplete="off" />
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3">
+						Semester 5:
+						<div class="wrap-input100 validate-input">
+							<input class="input100" type="number" name="edit_sem5_score"
+								value="{{ session['user']['marks']['sem5']}}" autocomplete="off" />
+						</div>
+					</div>
+					<div class="col-md-3">
+						Semester 6:
+						<div class="wrap-input100 validate-input">
+							<input class="input100" type="number" name="edit_sem6_score"
+								value="{{ session['user']['marks']['sem6']}}" />
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3">
+						Semester 7:
+						<div class="wrap-input100 validate-input">
+							<input class="input100" type="number" name="edit_sem7_score"
+								value="{{ session['user']['marks']['sem7']}}" />
+						</div>
+					</div>
+					<div class="col-md-3">
+						Semester 8:
+						<div class="wrap-input100 validate-input">
+							<input class="input100" type="number" name="edit_sem8_score"
+								value="{{ session['user']['marks']['sem8']}}" autocomplete="off" />
+						</div>
+					</div>
+				</div>
+
+				<span class="login100-form-title p-b-43 p-t-46"> Work Status: </span>
+				<div class="row" style="font-size: 20px">
+					<div class="row m-r-50">
+						<input type="radio" id="emp" name="emp_status" value="1" />
+						<label for="emp">Placed</label><br />
+					</div>
+
+					<div class="row m-r-50">
+						<input type="radio" id="unemp" class="m-r-10" name="emp_status" value="2" />
+						<label for="unemp">Looking for job</label><br />
+					</div>
+					<div class="row m-r-50">
+						<input type="radio" id="high_stud" class="m-r-10" name="emp_status" value="3" />
+						<label for="high_stud">Going for higher studies</label>
+					</div>
+				</div>
+				<div class="row m-t-20 m-l-5" id="student_package" style="font-size: 20px">
+					<label for="package">Choose the range of your package:</label>
+					<select id="package" class="m-l-10" name="package">
+						<option value="Unplaced">Unplaced</option>
+						<option value="less than 3lpa">less than 3lpa</option>
+						<option value="3 - 6lpa">3 - 6lpa</option>
+						<option value="6-10lpa">6-10lpa</option>
+						<option value="more than 10lpa">more than 10lpa</option>
+					</select>
+				</div>
+
+				{% with messages = get_flashed_messages(with_categories=true) %} {% if
+				messages %} {% for category, message in messages %}
+				<div class="row alert alert-{{ category }}" style="font-size: 25px">
+					{{ message }}
+				</div>
+				{% endfor %} {% endif %} {% endwith %}
+
+				<div class="row">
+
+					<div class="col-md-3 clearfix  mb-2 fs-20">
+						<div class="container-login100-form-btn m-t-120" style="max-width: 300px">
+							<input type="submit" style="font-size: 20px" class="btn login100-form-btn" name="save"
+								value="Save" id="save" />
+						</div>
+					</div>
+					<div class="col-md-3 clearfix  mb-5 fs-20 ">
+						<div class="col-md-3 container-login100-form-btn m-t-120 toggleEdit" style="max-width: 300px; ">
+							<input type="button" style="font-size: 20px;background-color: rgb(173, 21, 21);"
+								class="btn login100-form-btn" name="toggleEdit" value="Cancel" id="toggleEdit" />
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</form>
+
+
+	</div>
+</div>
+
+{% endblock %}

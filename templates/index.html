@@ -1,0 +1,83 @@
+
+{% extends "layout.html" %}
+
+{% block body %}
+	<div class="container row" style="min-width:100%">
+		<div class="container-login100">
+			<div  class="wrap-login100  ">
+				<div id='wrap-login' class="animate__animated ">
+
+					<form name='login_form'  method="POST" class="login100-form validate-form" >
+						<span class="align-items-center login100-form-title p-b-43">
+							Login to continue
+						</span>
+						
+						
+						<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+							<input placeholder="Enter Email" class="input100" type="text" name="email" autocomplete="off">
+						</div>
+						
+						
+						<div class="wrap-input100 validate-input" data-validate="Password is required">
+							<input placeholder="Enter Password" class="input100" type="password" name="pass" autocomplete="off">
+							<!-- <span class="focus-input100"></span> -->
+							<!-- <span class="label-input100">Password</span> -->
+						</div>
+						 
+	
+						<!-- <div class="flex-sb-m w-full p-t-3 p-b-32">
+							<div class="contact100-form-checkbox">
+								<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+								<label class="label-checkbox100" for="ckb1">
+									Remember me
+								</label>
+							</div>
+	
+							<div>
+								<a href="#" class="txt1">
+									Forgot Password?
+								</a>
+							</div>
+						</div> -->
+						{% with messages = get_flashed_messages(with_categories=true) %}
+                            {% if messages %}
+                            {% for category, message in messages %}
+                                <div class="row alert alert-{{ category }}" style="font-size: 15px;">
+                                {{ message }}
+                                </div>
+                            {% endfor %}
+                            {% endif %}
+                        {% endwith %}
+	
+						<div class="container-login100-form-btn">
+							<button type="submit" class="login100-form-btn" name='register' id='register'>
+								Login
+							</button>
+						</div>
+						
+						<div class="text-center p-t-46 p-b-20">
+							<span class="txt2">
+								<a id='shw' href="{{ url_for('register')}}" class="txt1 link">OR<br> Create a New Account</a>-
+							
+							</span>
+						</div>
+	
+						
+					</form>
+				</div>
+				
+				
+
+
+				<div class="login100-more" style="background-image:url('static/images/bg-03.png'); ">
+				</div>
+			</div>
+		</div>
+	</div>
+	{% endblock %}
+	
+	
+  
+
+
+

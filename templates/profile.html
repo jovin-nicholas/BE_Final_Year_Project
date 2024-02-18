@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class="container" style="margin-left: 0; margin-right: 0;">
+    <div class="row m-t-20 m-l-10 " style="width:100vw">
+        <div class="col-md-12">
+            <div class="profile-head row m-t-20 ">
+                <div class="col"  style="padding-left: -180px;">
+                    <h3 class="fs-62"> <b>{{ session['user']['fname'] + ' ' + session['user']['lname'] }}</b></h3>
+                </div>
+            </div>
+            <div class="profile-head row m-t-50">
+                <div class="col-md-8 ">
+                    <h4><b>Haven't taken the test?:</b></h4>
+
+                    <a href="{{ url_for('test') }}"> <button type="button"
+                            class="m-t-20 btn btn-lg  btn-danger waves-effect waves-light"
+                            style="background-color:red;color:white">Take Test</button></a>
+                    <h5 class="m-t-10" style="color:red">
+                        <b>( Please Make sure you have updated your semester pointers in the
+                            profile page before attempting :
+                            <a style="text-decoration:underline" href="{{ url_for('edit_profile')}}">Update Semester
+                                scores</a> )
+                        </b>
+                    </h5>
+                </div>
+            </div>
+
+            {% if session['user']['test_taken'] == 1 %}
+            <div class="col-md-5 m-t-80" style="margin-right: -100px;">
+                <h3><b>Previous Test Results:</b></h3>
+            </div>
+
+            <img src={{file}} alt="Chart" height="500" width="800">
+
+            <div class="col-md-8">
+                <div class="row m-t-30 m-b-30">
+                    <table class="table table-borderless" style="font-size: 22px;">
+                        <tr style="background-color: rgba(241, 241, 241, 0.829);">
+                            <th scope="col" class="p-l-15 p-r-15" >Sr. No.</th>
+                            <th scope="col" class="p-l-15 p-r-15" >Aptitude</th>
+                            <th scope="col" class="p-l-15 p-r-15" >Technical</th>
+                            <th scope="col" class="p-l-15 p-r-15" >Communication</th>
+                            <th scope="col" class="p-l-15 p-r-15" >Personality</th>
+                            <th scope="col" class="p-l-15 p-r-15" >Full result(click the button)</th>
+                            <th scope="col" class="p-l-15 p-r-15" >Date</th>
+                            <th scope="col" class="p-l-15 p-r-15" >Time</th>
+                        </tr>
+                        <tbody>
+                            {% set i = namespace(value=1) %}
+                            {% for rec in test_rec %}
+                            <tr>
+                                <td scope="row" class="p-l-5 p-r-5" style="background-color: rgba(241, 241, 241, 0.829);">{{ i.value }}.</td>
+                                <td scope="row" class="p-l-5 p-r-5">{{ rec['param_scores']['o1'] }}</td>
+                                <td scope="row" class="p-l-5 p-r-5">{{ rec['param_scores']['o2'] }}</td>
+                                <td scope="row" class="p-l-5 p-r-5">{{ rec['param_scores']['o3'] }}</td>
+                                <td scope="row" class="p-l-5 p-r-5">{{ rec['param_scores']['o4'] }}</td>
+                                <td scope="row" class="p-l-5 p-r-5">
+                                    <form method="post">
+                                        <input type="submit" style="max-width: 3vw;font-size: 0px;max-height: 1.5vw;"
+                                            class="login100-form-btn " value="{{rec['test_id']}}" name='result_but' />
+                                    </form>
+                                </td>
+                                <td scope="row" class="p-l-5 p-r-5">{{ rec['test_date'] }}</td>
+                                <td scope="row" class="p-l-5 p-r-5">{{ rec['test_time'] }}</td>
+                            </tr>
+                            {% set i.value = i.value+1 %}
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+</div>
+
+{% endblock %}
